@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const routes = require('./routes')
+const port = 3333
 
 require('./database')
 
@@ -10,6 +11,6 @@ app.use(cors())
 app.use(express.json())
 app.use(routes)
 
-app.listen(3333, () => {
-  console.log('LiveLongAndProsper...')
+app.listen(port, () => {
+  console.log(`LiveLongAndProsper... port ${port}`)
 })
